@@ -343,6 +343,9 @@ main > section > article > header > p {
 main > section > article > header > p > span {
   font-size: 22px;
 }
+main > section > article > header > p > span > i {
+  color: yellow;
+}
 main > section > article > footer {
   padding: 2rem;
 }
@@ -350,9 +353,41 @@ main > section > article > footer > p {
   padding-bottom: 1rem;
 }
 main > section > aside {
+  color: #abb7c4;
+  background-color: #0b1a2a;
+  border: 3px solid #0f2133;
   grid-column: 2/3;
   grid-row: 1/7;
-  background-color: blue;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 1rem;
+}
+main > section > aside > section > form {
+  height: 30vh;
+  display: grid;
+  grid-tempalte-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+main > section > aside > section > form > h4 {
+  padding-bottom: 1rem;
+  font-size: 18px;
+  width: 60%;
+  margin: auto;
+}
+main > section > aside > section > form > select {
+  width: 60%;
+  margin: auto;
+  background-color: #abb7c4;
+  margin-bottom: 1rem;
+}
+main > section > aside > section > form > select:nth-of-child(4) {
+  width: 50%;
+}
+main > section > aside > section > form > select:nth-of-child(5) {
+  width: 50%;
+}
+main > section > aside > section > h4 {
+  padding-bottom: 1rem;
+  font-size: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
