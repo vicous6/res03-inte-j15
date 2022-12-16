@@ -1,0 +1,41 @@
+@media(max-width: 1050px) {
+.a1{
+                                   padding: 5px 0px
+                        }
+
+ body{ 
+     &> header{
+       height:65vh;
+       &> nav{
+           width:100%;
+           display:grid;
+           
+           &> ul{
+               grid-template-columns: 0.7fr;
+                li:nth-of-type(6) {
+                    
+                    grid-column:unset;
+                }
+                &>li{
+                    
+                    
+                
+                        padding-top: 1.5rem;
+                        
+                }
+           }
+       }
+   }
+}
+.sous{
+    width: 100%;
+}
+
+}
+
+
+@media(min-width: 1050px) {
+    
+    
+
+}

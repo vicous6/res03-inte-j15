@@ -1,0 +1,82 @@
+body{
+&>footer{
+        height: 53vh;
+    padding-top: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 0.2fr;
+    background:url("../../../assets/images/ft-bg.jpg");
+    background-size:cover;
+    color:white;
+    &>ul {
+            color: #abb7c4;
+        &>li{
+            
+            margin-bottom:1.2rem;
+           
+                &>span{
+                    color:white;
+                    font-size:1.8rem;
+                }
+            
+            &>figure{}
+            &>img{}
+            &>input{
+                background:none;
+            }
+            &>h5{
+                color:white;
+                font-size:1.7rem;
+                    font-weight: bold;
+                    margin-bottom:2rem;
+            }
+        }
+    }
+    &> ul:nth-of-type(6){
+        border-top:1px grey solid;
+        grid-column:1/6;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        &>li:nth-of-type(1){
+            grid-column:2/4;
+            padding-top:1.6rem;
+        }
+        &>li:nth-of-type(2){
+            grid-column:4/5;
+             padding-top:1.6rem;
+              &::after {
+            display:inline-block;
+             
+            content:">";
+            transform:rotate(-90deg);
+          
+            text-decoration:none;
+            
+        }
+        }
+    }
+ 
+}}
+#img-li{
+  padding-bottom:2.5rem;  
+}
+#subscribe{
+    
+    
+    color:red;
+    &::after {
+            display:inline-block;
+             
+            content:">";
+          
+
+            
+        }
+}
+#li-button{
+        width: 15vh;
+    justify-self: center;
+}
