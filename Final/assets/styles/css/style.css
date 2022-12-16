@@ -1,0 +1,530 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body > header {
+  height: 16vh;
+}
+body > header > nav {
+  padding-top: 1rem;
+  width: 97%;
+  margin: 0 auto;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+}
+body > header > nav > ul {
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 1fr 0.7fr 1fr 1fr 0.5fr 0.5fr 0.5fr 1fr;
+  list-style-type: none;
+}
+body > header > nav > ul > li {
+  padding-top: 3rem;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+body > header > nav > ul > ::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body > header > nav > ul > li:nth-of-type(6) {
+  grid-column: 7/8;
+}
+body > header > nav > ul > li:nth-of-type(9) {
+  padding-top: 2.5rem;
+}
+body > header > nav > figure {
+  padding-top: 1rem;
+}
+body > header > nav .a1 {
+  color: #abb7c4;
+  font-family: "Dosis", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: #abb7c4;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0px;
+}
+body > header > nav .a1:hover {
+  color: orange;
+  border-bottom: 2px solid gold;
+}
+body > header > nav > ul > li:hover > .sous {
+  display: block;
+}
+body .sous {
+  display: none;
+  box-shadow: 0px 1px 2px #CCC;
+  background-color: white;
+  position: absolute;
+  width: 180%;
+  z-index: 1000;
+}
+body .sous > li {
+  height: 3rem;
+  float: none;
+  text-align: left;
+}
+body .sous > li:nth-of-type(1) {
+  padding-top: 1rem;
+}
+body .sous .a2 {
+  padding: 10px;
+  border-bottom: none;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+body .sous .a2:hover {
+  border-bottom: none;
+  background-color: RGBa(200, 200, 200, 0.1);
+}
+
+.deroulant > a::after {
+  display: inline-block;
+  transform: rotate(90deg);
+  content: ">";
+  font-size: 12px;
+}
+
+.conteneur {
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+.btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 30px;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .a1 {
+    padding: 5px 0px;
+  }
+  body > header {
+    height: 65vh;
+  }
+  body > header > nav {
+    width: 100%;
+    display: grid;
+  }
+  body > header > nav > ul {
+    grid-template-columns: 0.7fr;
+  }
+  body > header > nav > ul li:nth-of-type(6) {
+    grid-column: unset;
+  }
+  body > header > nav > ul > li {
+    padding-top: 1.5rem;
+  }
+  .sous {
+    width: 100%;
+  }
+}
+body > footer {
+  height: 53vh;
+  padding-top: 10rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  background: url("../../../assets/images/ft-bg.jpg");
+  background-size: cover;
+  color: white;
+}
+body > footer > ul {
+  color: #abb7c4;
+}
+body > footer > ul > li {
+  margin-bottom: 1.2rem;
+}
+body > footer > ul > li > span {
+  color: white;
+  font-size: 1.8rem;
+}
+body > footer > ul > li > input {
+  background: none;
+}
+body > footer > ul > li > h5 {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+body > footer > ul:nth-of-type(6) {
+  border-top: 1px grey solid;
+  grid-column: 1/6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+body > footer > ul:nth-of-type(6) > li:nth-of-type(1) {
+  grid-column: 2/4;
+  padding-top: 1.6rem;
+}
+body > footer > ul:nth-of-type(6) > li:nth-of-type(2) {
+  grid-column: 4/5;
+  padding-top: 1.6rem;
+}
+body > footer > ul:nth-of-type(6) > li:nth-of-type(2)::after {
+  display: inline-block;
+  content: ">";
+  transform: rotate(-90deg);
+  text-decoration: none;
+}
+
+#img-li {
+  padding-bottom: 2.5rem;
+}
+
+#subscribe {
+  color: red;
+}
+#subscribe::after {
+  display: inline-block;
+  content: ">";
+}
+
+#li-button {
+  width: 15vh;
+  justify-self: center;
+}
+
+@media (max-width: 1050px) {
+  body > footer {
+    height: 148vh;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  body > footer > #footer-footer {
+    grid-column: unset;
+  }
+  body > footer > ul > li {
+    margin-bottom: 0.5rem;
+  }
+}
+#body2 > main {
+  padding-bottom: 1rem;
+  background-color: #020d18;
+  color: white;
+}
+#body2 > main > header {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#body2 > main > header > h2 {
+  font-family: "Dosis", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#body2 > main > header > p {
+  font-family: "Dosis", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#body2 > main > section {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#body2 > main > section > ul {
+  margin: 1rem 2rem;
+  padding: 0.4rem;
+  border: 1px white solid;
+  display: flex;
+  justify-content: space-around;
+}
+#body2 > main > section > article {
+  padding-bottom: 2rem;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+#body2 > main > section > article > figure {
+  grid-row: 1/3;
+}
+#body2 > main > section > article > figure > img {
+  width: 100%;
+}
+#body2 > main > section > article > header {
+  width: 90%;
+  font-size: 12px;
+  padding: 2rem;
+  border-bottom: 1px solid grey;
+}
+#body2 > main > section > article > header > h3 {
+  font-size: 16px;
+}
+#body2 > main > section > article > header > p {
+  padding-top: 1rem;
+  font-size: 14px;
+  color: #abb7c4;
+  font-weight: 300;
+  text-transform: none;
+}
+#body2 > main > section > article > header > p > span {
+  font-size: 22px;
+}
+#body2 > main > section > article > header > p > span > i {
+  color: yellow;
+}
+#body2 > main > section > article > footer {
+  padding: 2rem;
+}
+#body2 > main > section > article > footer > p {
+  padding-bottom: 1rem;
+}
+#body2 > main > section > aside {
+  color: #abb7c4;
+  background-color: #0b1a2a;
+  border: 3px solid #0f2133;
+  grid-column: 2/3;
+  grid-row: 1/7;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 1rem;
+}
+#body2 > main > section > aside > section > form {
+  height: 30vh;
+  display: grid;
+  grid-tempalte-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#body2 > main > section > aside > section > form > h4 {
+  padding-bottom: 1rem;
+  font-size: 18px;
+  width: 60%;
+  margin: auto;
+}
+#body2 > main > section > aside > section > form > select {
+  width: 60%;
+  margin: auto;
+  background-color: #abb7c4;
+  margin-bottom: 1rem;
+}
+#body2 > main > section > aside > section > form > select:nth-of-child(4) {
+  width: 50%;
+}
+#body2 > main > section > aside > section > form > select:nth-of-child(5) {
+  width: 50%;
+}
+#body2 > main > section > aside > section > h4 {
+  padding-bottom: 1rem;
+  font-size: bold;
+}
+
+main {
+  width: 100%;
+  list-style: none;
+}
+main > #first {
+  background-color: #19232c;
+  height: 65vh;
+}
+main > #first > .delta {
+  display: none;
+}
+main > #first > article {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 20vh;
+  padding: 15vh;
+  padding-right: 15vh;
+}
+main > #first > article > .ul1 {
+  display: flex;
+  margin: 0;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding-top: 2em;
+}
+main > #first > article > .ul1 > .blue {
+  margin-right: 4px;
+}
+main > #first > article > .ul1 > .blue > input {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main > #first > article > .ul1 > .yell {
+  margin-right: 4px;
+}
+main > #first > article > .ul1 > .yell > input {
+  background-color: #f5b50a;
+  color: white;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main > #first > article > .ul1 > .orange > input {
+  background-color: #ec5a1a;
+  color: white;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main > #first > article > h2 {
+  color: white;
+  font-size: 3em;
+  margin-top: 0;
+  font-family: monospace;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+main > #first > article > ul {
+  display: flex;
+  margin: 0;
+  padding: 4px;
+  grid-row: 3/4;
+}
+main > #first > article > ul > li {
+  list-style: none;
+}
+main > #first > article > ul > li > img {
+  color: white;
+  background-color: #dd003f;
+  border: solid #dd003f;
+  border-radius: 15px 15px 15px 15px;
+  margin-left: 10px;
+}
+main > #first > article > ul > li > button {
+  color: #dd003f;
+  border: none;
+  background-color: transparent;
+}
+main > #first > article > input {
+  grid-row: 4/5;
+  width: 10em;
+  color: white;
+  background-color: #dd003f;
+  border: none;
+  border-radius: 15px 15px 15px 15px;
+}
+main > #first > article > img {
+  grid-column: 2/3;
+  grid-row: 1/5;
+}
+main > #theatre {
+  list-style: none;
+  width: 90%;
+  margin: auto;
+}
+main > #theatre > h3 {
+  font-size: 24px;
+}
+main > #theatre > ul {
+  display: flex;
+}
+main > #theatre > ul > li {
+  margin-right: 15px;
+  color: #abb7c4;
+}
+main > #theatre > .article {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+main > #tv {
+  list-style: none;
+  width: 90%;
+  margin: auto;
+}
+main > #tv > h3 {
+  font-size: 24px;
+}
+main > #tv > ul {
+  display: flex;
+}
+main > #tv > ul > li {
+  margin-right: 15px;
+  color: #abb7c4;
+}
+main > #tv > .article {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/*# sourceMappingURL=style.css.map */
