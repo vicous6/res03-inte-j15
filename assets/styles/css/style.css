@@ -1,3 +1,53 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 main {
   width: 100%;
   list-style: none;
@@ -10,7 +60,7 @@ main > #first > .delta {
   display: none;
 }
 main > #first > article {
-  width: 90%;
+  width: 70%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -71,10 +121,16 @@ main > #first > article > ul > li {
   list-style: none;
 }
 main > #first > article > ul > li > img {
+  color: white;
   background-color: #dd003f;
+  border: solid #dd003f;
+  border-radius: 15px 15px 15px 15px;
+  margin-left: 10px;
 }
 main > #first > article > ul > li > button {
   color: #dd003f;
+  border: none;
+  background-color: transparent;
 }
 main > #first > article > input {
   grid-row: 4/5;
@@ -87,6 +143,24 @@ main > #first > article > input {
 main > #first > article > img {
   grid-column: 2/3;
   grid-row: 1/5;
+}
+main > #theatre {
+  list-style: none;
+}
+main > #theatre > h3 {
+  font-size: 24px;
+}
+main > #theatre > ul {
+  display: flex;
+}
+main > #theatre > ul > li {
+  margin-right: 15px;
+  color: #abb7c4;
+}
+main > #theatre > .article {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 
 /*# sourceMappingURL=style.css.map */
