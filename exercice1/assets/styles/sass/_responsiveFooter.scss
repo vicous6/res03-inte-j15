@@ -1,0 +1,24 @@
+@media(max-width: 1050px) {
+
+body{
+   &> footer {
+        height: 148vh;
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        &>#footer-footer {
+            grid-column: unset;
+        }
+        &> ul{
+            &> li{
+                margin-bottom: 0.5rem;
+
+            }
+        }
+    }
+
+}}
+
+
+@media(min-width: 1050px) {}

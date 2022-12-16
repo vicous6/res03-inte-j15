@@ -52,12 +52,12 @@ table {
   border-spacing: 0;
 }
 
-header {
-  height: 13vh;
+body > header {
+  height: 16vh;
 }
-header > nav {
-  padding-top: 2rem;
-  width: 90%;
+body > header > nav {
+  padding-top: 1rem;
+  width: 97%;
   margin: 0 auto;
   background-color: white;
   position: sticky;
@@ -65,48 +65,48 @@ header > nav {
   display: grid;
   grid-template-columns: 0.1fr 1fr;
 }
-header > nav > ul {
+body > header > nav > ul {
   display: grid;
-  grid-template-columns: 0.7fr 0.7fr 1fr 0.7fr 1fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.7fr 0.7fr 1fr 0.7fr 1fr 1fr 0.5fr 0.5fr 0.5fr 1fr;
   list-style-type: none;
 }
-header > nav > ul > li {
+body > header > nav > ul > li {
   padding-top: 3rem;
   float: left;
   text-align: center;
   position: relative;
 }
-header > nav > ul > ::after {
+body > header > nav > ul > ::after {
   content: "";
   display: table;
   clear: both;
 }
-header > nav > ul > li:nth-of-type(6) {
+body > header > nav > ul > li:nth-of-type(6) {
   grid-column: 7/8;
 }
-header > nav > ul > li:nth-of-type(9) {
+body > header > nav > ul > li:nth-of-type(9) {
   padding-top: 2.5rem;
 }
-header > nav > figure {
+body > header > nav > figure {
   padding-top: 1rem;
 }
-header > nav .a1 {
+body > header > nav .a1 {
+  color: #abb7c4;
   font-family: "Dosis", sans-serif;
   display: block;
   text-decoration: none;
-  color: black;
+  color: #abb7c4;
   border-bottom: 2px solid transparent;
-  padding: 10px 0px;
+  padding: 0.5rem 0px;
 }
-header > nav .a1:hover {
+body > header > nav .a1:hover {
   color: orange;
   border-bottom: 2px solid gold;
 }
-header > nav > ul > li:hover > .sous {
+body > header > nav > ul > li:hover > .sous {
   display: block;
 }
-
-.sous {
+body .sous {
   display: none;
   box-shadow: 0px 1px 2px #CCC;
   background-color: white;
@@ -114,17 +114,26 @@ header > nav > ul > li:hover > .sous {
   width: 180%;
   z-index: 1000;
 }
-.sous li {
+body .sous > li {
   height: 3rem;
   float: none;
   text-align: left;
 }
-.sous a {
+body .sous > li:nth-of-type(1) {
+  padding-top: 1rem;
+}
+body .sous .a2 {
   padding: 10px;
   border-bottom: none;
   text-align: center;
+  font-family: "Dosis", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
 }
-.sous a:hover {
+body .sous .a2:hover {
   border-bottom: none;
   background-color: RGBa(200, 200, 200, 0.1);
 }
@@ -145,12 +154,205 @@ header > nav > ul > li:hover > .sous {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 30px;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .a1 {
+    padding: 5px 0px;
+  }
+  body > header {
+    height: 65vh;
+  }
+  body > header > nav {
+    width: 100%;
+    display: grid;
+  }
+  body > header > nav > ul {
+    grid-template-columns: 0.7fr;
+  }
+  body > header > nav > ul li:nth-of-type(6) {
+    grid-column: unset;
+  }
+  body > header > nav > ul > li {
+    padding-top: 1.5rem;
+  }
+  .sous {
+    width: 100%;
+  }
+}
+body > footer {
+  height: 53vh;
+  padding-top: 10rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  background: url("../../../assets/images/ft-bg.jpg");
+  background-size: cover;
+  color: white;
+}
+body > footer > ul {
+  color: #abb7c4;
+}
+body > footer > ul > li {
+  margin-bottom: 1.2rem;
+}
+body > footer > ul > li > span {
+  color: white;
+  font-size: 1.8rem;
+}
+body > footer > ul > li > input {
+  background: none;
+}
+body > footer > ul > li > h5 {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+body > footer > ul:nth-of-type(6) {
+  border-top: 1px grey solid;
+  grid-column: 1/6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+body > footer > ul:nth-of-type(6) > li:nth-of-type(1) {
+  grid-column: 2/4;
+  padding-top: 1.6rem;
+}
+body > footer > ul:nth-of-type(6) > li:nth-of-type(2) {
+  grid-column: 4/5;
+  padding-top: 1.6rem;
+}
+body > footer > ul:nth-of-type(6) > li:nth-of-type(2)::after {
+  display: inline-block;
+  content: ">";
+  transform: rotate(-90deg);
+  text-decoration: none;
+}
+
+#img-li {
+  padding-bottom: 2.5rem;
+}
+
+#subscribe {
+  color: red;
+}
+#subscribe::after {
+  display: inline-block;
+  content: ">";
+}
+
+#li-button {
+  width: 15vh;
+  justify-self: center;
+}
+
+@media (max-width: 1050px) {
+  body > footer {
+    height: 148vh;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  body > footer > #footer-footer {
+    grid-column: unset;
+  }
+  body > footer > ul > li {
+    margin-bottom: 0.5rem;
+  }
+}
+main {
+  padding-bottom: 1rem;
+  background-color: #020d18;
+  color: white;
+}
+main > header {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main > header > h2 {
+  font-family: "Dosis", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+main > header > p {
+  font-family: "Dosis", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+main > section {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+main > section > ul {
+  margin: 1rem 2rem;
+  padding: 0.4rem;
+  border: 1px white solid;
+  display: flex;
+  justify-content: space-around;
+}
+main > section > article {
+  padding-bottom: 2rem;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+main > section > article > figure {
+  grid-row: 1/3;
+}
+main > section > article > figure > img {
+  width: 100%;
+}
+main > section > article > header {
+  width: 90%;
+  font-size: 12px;
+  padding: 2rem;
+  border-bottom: 1px solid grey;
+}
+main > section > article > header > h3 {
+  font-size: 16px;
+}
+main > section > article > header > p {
+  padding-top: 1rem;
+  font-size: 14px;
+  color: #abb7c4;
+  font-weight: 300;
+  text-transform: none;
+}
+main > section > article > header > p > span {
+  font-size: 22px;
+}
+main > section > article > footer {
+  padding: 2rem;
+}
+main > section > article > footer > p {
+  padding-bottom: 1rem;
+}
+main > section > aside {
+  grid-column: 2/3;
+  grid-row: 1/7;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
