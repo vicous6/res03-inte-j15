@@ -146,6 +146,8 @@ main > #first > article > img {
 }
 main > #theatre {
   list-style: none;
+  width: 90%;
+  margin: auto;
 }
 main > #theatre > h3 {
   font-size: 24px;
